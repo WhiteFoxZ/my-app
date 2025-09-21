@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+vscode 설치
+ESLint
+Prettier ESLint
+Reactjs code snippets
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://ko.legacy.reactjs.org/docs/create-a-new-react-app.html
+npx create-react-app my-app
 
-## Available Scripts
+에러
+npm ERR! network 'proxy' config is set properly. See: 'npm help config'
 
-In the project directory, you can run:
+해결
+npm config delete proxy
+npm config delete https-proxy
 
-### `npm start`
+prettier
+![prettier](prettier.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+.prettierrc 생성
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+settion text editer formatting
 
-### `npm test`
+![alt text](formatting.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+{
+"printWidth": 120, // 코드 최대 줄 길이
+"tabWidth": 2, // 들여쓰기 너비 (스페이스 2칸)
+"singleQuote": true, // 따옴표는 '' (큰따옴표 대신 작은따옴표 사용)
+"semi": true, // 문장 끝 세미콜론 사용 여부 (true: 사용)
+"trailingComma": "es5", // 꼬리 쉼표 사용 (es5: 객체, 배열 등에서 마지막 요소 뒤에 쉼표 추가)
+"bracketSpacing": true, // 객체 리터럴에서 괄호 안 공백 사용 여부
+"arrowParens": "avoid" // 화살표 함수의 인자에 괄호 사용 여부 (avoid: 불필요한 괄호 생략)
+}
 
-### `npm run build`
+google fonts - Noto Sans Korean
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://www.photopea.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://mironcoder-hotash.netlify.app/ecommerce
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+폴더생성 components, pages,assets\images
 
-### `npm run eject`
+src\assets\images logo 이미지 다운
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install react-router-dom
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://mui.com/material-ui/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+https://mui.com/material-ui/getting-started/installation/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install @mui/material @emotion/react @emotion/styled
 
-## Learn More
+npm install @mui/material @mui/styled-engine-sc styled-components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install @mui/icons-material
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install react-icons --save
 
-### Code Splitting
+구글 검색 bootstrap 4 npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm install bootstrap 설치
