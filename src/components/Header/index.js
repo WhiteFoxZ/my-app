@@ -20,6 +20,8 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 
+import { IoShieldHalfSharp } from 'react-icons/io5';
+
 const Header = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -118,27 +120,19 @@ const Header = () => {
                                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                                 >
                                     <MenuItem onClick={handleAccountClose}>
-                                        <Avatar /> Profile
-                                    </MenuItem>
-                                    <MenuItem onClick={handleAccountClose}>
                                         <Avatar /> My account
                                     </MenuItem>
                                     <Divider />
+
                                     <MenuItem onClick={handleAccountClose}>
                                         <ListItemIcon>
-                                            <PersonAdd fontSize="small" />
+                                            <IoShieldHalfSharp />
                                         </ListItemIcon>
-                                        Add another account
+                                        Reset Password
                                     </MenuItem>
                                     <MenuItem onClick={handleAccountClose}>
                                         <ListItemIcon>
-                                            <Settings fontSize="small" />
-                                        </ListItemIcon>
-                                        Settings
-                                    </MenuItem>
-                                    <MenuItem onClick={handleAccountClose}>
-                                        <ListItemIcon>
-                                            <Logout fontSize="small" />
+                                            <Logout />
                                         </ListItemIcon>
                                         Logout
                                     </MenuItem>
