@@ -24,11 +24,23 @@ import { IoShieldHalfSharp } from 'react-icons/io5';
 
 const Header = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
+
     const open = Boolean(anchorEl);
+
     const handleAccountClick = event => {
         setAnchorEl(event.currentTarget);
     };
     const handleAccountClose = () => {
+        setAnchorEl(null);
+    };
+
+    const [regBellEl, setRegBellEl] = React.useState(null);
+    const openBell = Boolean(regBellEl);
+
+    const handleFaRegBellMenuClick = event => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleFaRegBellMenuClose = () => {
         setAnchorEl(null);
     };
 
@@ -65,9 +77,67 @@ const Header = () => {
                             <Button className="rounded-circle me-3">
                                 <MdOutlineMailOutline />3
                             </Button>
-                            <Button className="rounded-circle me-3">
+
+                            <Button className="rounded-circle me-3" onClick={handleFaRegBellMenuClick}>
                                 <FaRegBell />4
                             </Button>
+
+                            <Menu
+                                anchorEl={anchorEl}
+                                id="FaRegBellMenu"
+                                open={openBell}
+                                onClose={handleFaRegBellMenuClose}
+                                onClick={handleFaRegBellMenuClose}
+                                slotProps={{
+                                    paper: {
+                                        elevation: 0,
+                                        sx: {
+                                            overflow: 'visible',
+                                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                            mt: 1.5,
+                                            '& .MuiAvatar-root': {
+                                                width: 32,
+                                                height: 32,
+                                                ml: -0.5,
+                                                mr: 1,
+                                            },
+                                            '&::before': {
+                                                content: '""',
+                                                display: 'block',
+                                                position: 'absolute',
+                                                top: 0,
+                                                right: 14,
+                                                width: 10,
+                                                height: 10,
+                                                bgcolor: 'background.paper',
+                                                transform: 'translateY(-50%) rotate(45deg)',
+                                                zIndex: 0,
+                                            },
+                                        },
+                                    },
+                                }}
+                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                            >
+                                <MenuItem onClick={handleFaRegBellMenuClose}>
+                                    <Avatar /> My account
+                                </MenuItem>
+                                <Divider />
+
+                                <MenuItem onClick={handleFaRegBellMenuClose}>
+                                    <ListItemIcon>
+                                        <IoShieldHalfSharp />
+                                    </ListItemIcon>
+                                    Reset Password
+                                </MenuItem>
+                                <MenuItem onClick={handleFaRegBellMenuClose}>
+                                    <ListItemIcon>
+                                        <Logout />
+                                    </ListItemIcon>
+                                    Logout
+                                </MenuItem>
+                            </Menu>
+
                             <div className="myAccWrapper d-flex align-items-center">
                                 <Button className="myAcc d-flex align-items-center" onClick={handleAccountClick}>
                                     <div className="userImg">
