@@ -83,7 +83,7 @@ header button.rounded-circle:hover svg {
     text-align: left !important;
     border: 1px solid; /** 주석처리 */
 }
-.myAcc .userImg {
+.userImg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +95,7 @@ header button.rounded-circle:hover svg {
     border-radius: 100%;
 }
 
-.myAcc .userImg .rounded-circle {
+.userImg .rounded-circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,20 +103,19 @@ header button.rounded-circle:hover svg {
     cursor: pointer;
     position: relative;
 }
-.myAcc .userImg .rounded-circle img {
+.userImg .rounded-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-.myAcc .userInfo {
+.userInfo {
     padding-left: 5px;
     /*background-color: red;
     color: blueviolet;
     */
 }
 
-.myAcc .userInfo h4 {
+.userInfo h4 {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 0px;
@@ -124,7 +123,7 @@ header button.rounded-circle:hover svg {
     text-transform: capitalize;
 }
 
-.myAcc .userInfo p {
+.userInfo p {
     margin-top: 0px;
     font-size: 10px;
     opacity: 0.7;
@@ -144,4 +143,48 @@ header button.rounded-circle:hover svg {
 #account-menu li svg {
     font-size: 18px !important;
     /* color: red !important; */
+}
+
+.notifyItem {
+    font-size: '15px';
+    line-height: 22px;
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.notifyItem .MuiPaper-elevation {
+    width: 300px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.notifyItem .itemList {
+    overflow-y: scroll;
+    max-height: 300px !important;
+}
+
+.notifyItem .userImg {
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.dropInfo {
+    white-space: normal;
+    word-break: break-all;
+    margin: 0px;
+    padding: 0px;
+}
+
+.text-sky {
+    color: #0858f7 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc !important;
 }
