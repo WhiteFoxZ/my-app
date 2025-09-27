@@ -105,7 +105,7 @@ const Header = () => {
                                     <IoCartOutline />5
                                 </Button>
                                 <Menu
-                                    className="notifyItem"
+                                    className="dropdown-list"
                                     anchorEl={cartEl}
                                     id="cart-menu"
                                     open={openCart}
@@ -147,7 +147,7 @@ const Header = () => {
                                     </div>
                                     <Divider className="mb-1" />
 
-                                    <div className="itemList">
+                                    <div className="scroll">
                                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(element => (
                                             <MenuItem key={element} onClick={handleCartMenuClose}>
                                                 <div className="item d-flex align-items-center">
@@ -169,7 +169,9 @@ const Header = () => {
                                         ))}
                                     </div>
 
-                                    <Button className="item">See All Orders</Button>
+                                    <div className="px-1 pt-1 pb-1 w-100">
+                                        <Button className="item-button w-100">See All Orders</Button>
+                                    </div>
                                 </Menu>
                             </div>
 
