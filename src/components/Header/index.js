@@ -150,23 +150,26 @@ const Header = () => {
                                     <div className="itemList">
                                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(element => (
                                             <MenuItem key={element} onClick={handleCartMenuClose}>
-                                                <div className="d-flex align-items-center">
+                                                <div className="item d-flex align-items-center">
                                                     <div className="userImg">
                                                         <span className="rounded-circle">
                                                             <img src="https://mironcoder-hotash.netlify.app/images/avatar/01.webp" />
                                                         </span>
                                                     </div>
-                                                    <div className="dropInfo ms-2">
+                                                    <div className="dropInfo ms-2 me-2">
                                                         Order #{element}
                                                         <b>asdfasdf</b>
                                                         asdfasdfasdf
                                                         <b>dsfasdf</b>
+                                                        asdfasdfasdfasdf asdfasdfasdfsadf asdfasdasdfa
                                                         <p className="text-sky"> few secound ago</p>
                                                     </div>
                                                 </div>
                                             </MenuItem>
                                         ))}
                                     </div>
+
+                                    <Button className="item">See All Orders</Button>
                                 </Menu>
                             </div>
 

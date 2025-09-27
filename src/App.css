@@ -123,13 +123,6 @@ header button.rounded-circle:hover svg {
     text-transform: capitalize;
 }
 
-.userInfo p {
-    margin-top: 0px;
-    font-size: 10px;
-    opacity: 0.7;
-    padding: 0px;
-}
-
 #account-menu li {
     font-size: 14px !important;
     /* color: red !important; */
@@ -159,6 +152,11 @@ header button.rounded-circle:hover svg {
     margin: 0px !important;
 }
 
+.notifyItem .MuiPaper-elevation li {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
 .notifyItem .itemList {
     overflow-y: scroll;
     max-height: 300px !important;
@@ -167,6 +165,7 @@ header button.rounded-circle:hover svg {
 .notifyItem .userImg {
     min-width: 40px;
     min-height: 40px;
+    margin-left: 13px;
 }
 
 .dropInfo {
@@ -174,6 +173,13 @@ header button.rounded-circle:hover svg {
     word-break: break-all;
     margin: 0px;
     padding: 0px;
+}
+
+.dropInfo p {
+    font-size: 10px;
+    opacity: 0.7;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .text-sky {
@@ -187,4 +193,15 @@ header button.rounded-circle:hover svg {
 
 ::-webkit-scrollbar-thumb {
     background-color: #ccc !important;
+}
+
+.item {
+    width: 100% !important;
+    background-color: #ebf6ff !important;
+    border-radius: 8px !important;
+    border: none !important;
+    border-top: 1px solid #ccc !important;
+    border-bottom: none !important;
+    padding: 0px 0px !important;
+    box-shadow: none !important;
 }
