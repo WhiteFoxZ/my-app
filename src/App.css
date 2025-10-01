@@ -292,6 +292,9 @@ header button.rounded-circle:hover svg {
 .main .sidebarWrapper .sidebar ul li button.active {
     background: #f1f2f4 !important;
 }
+.main .sidebarWrapper .sidebar ul li button.active .arrow {
+    transform: rotate(90deg);
+}
 
 .main .sidebarWrapper .sidebar ul li button .icon {
     display: flex;
@@ -316,6 +319,7 @@ header button.rounded-circle:hover svg {
     justify-content: end;
     width: 25px;
     height: 25px;
+    transition: all 0.3s ease-in-out;
 }
 /* ------------------submenu--------------------- */
 

@@ -24,7 +24,7 @@ const SideBar = () => {
                     <li>
                         <Link to="/" className="text-decoration-none">
                             <Button
-                                className={` w-100 ${activeTap === 0 ? 'active' : ''} `}
+                                className={` w-100 ${activeTap === 0 && isToggleSubmenu === true ? 'active' : ''} `}
                                 onClick={() => isOpenSubmenu(0)}
                             >
                                 <span className="icon">
@@ -40,7 +40,7 @@ const SideBar = () => {
 
                     <li>
                         <Button
-                            className={` w-100 ${activeTap === 1 ? 'active' : ''} `}
+                            className={` w-100 ${activeTap === 1 && isToggleSubmenu === true ? 'active' : ''} `}
                             onClick={() => isOpenSubmenu(1)}
                         >
                             <span className="icon">
