@@ -14,7 +14,7 @@ function App() {
                 <div className="sidebarWrapper">
                     <SideBar />
                 </div>
-                <div className="context">
+                <div className="content">
                     <Routes>
                         <Route path="/" exact={true} element={<Dashboard />} />
                         <Route path="/dashboard" exact={true} element={<Dashboard />} />

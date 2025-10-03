@@ -20,6 +20,8 @@ const SideBar = () => {
     return (
         <>
             <div className="sidebar">
+                <div className="title">main pages</div>
+
                 <ul>
                     <li>
                         <Link to="/" className="text-decoration-none">
