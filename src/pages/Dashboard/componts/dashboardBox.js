@@ -44,20 +44,20 @@ const DashboardBox = props => {
                         {props.icon ? (
                             <span className="icon">{props.icon}</span>
                         ) : (
-                            <Button className="ms-auto toggleIcon" onClick={handleClick}>
+                            <div className="ms-auto toggleIcon" onClick={handleClick}>
                                 <HiDotsVertical />
-                            </Button>
+                            </div>
                         )}
                     </div>
                 </div>
 
                 <div className="d-flex align-items-center w-100  ">
-                    <h7 className="text-white mb-0 mt-0">Last Month</h7>
+                    <h4 className="text-white mb-0 mt-0">Last Month</h4>
 
                     {props.icon ? (
-                        <Button className="ms-auto toggleIcon" onClick={handleClick}>
+                        <div className="ms-auto toggleIcon" onClick={handleClick}>
                             <HiDotsVertical />
-                        </Button>
+                        </div>
                     ) : (
                         <span></span>
                     )}
