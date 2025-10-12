@@ -353,6 +353,7 @@ header button.rounded-circle:hover svg {
 .main .sidebarWrapper .sidebar ul .submenu li {
     width: 100%;
     list-style: none;
+    text-transform: capitalize !important;
 }
 
 .main .sidebarWrapper .sidebar ul .submenu li a {

@@ -1,13 +1,21 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import { FaAngleRight } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 import { FaLock } from 'react-icons/fa';
 import { FaUserCircle } from 'react-icons/fa';
+import { AiFillProduct } from 'react-icons/ai';
 
-import { FaAngleRight } from 'react-icons/fa';
-import { AiOutlineProduct } from 'react-icons/ai';
-import { TiShoppingCart } from 'react-icons/ti';
+import { FaReceipt } from 'react-icons/fa6';
+
+import { FaShoppingCart } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { FaBell } from 'react-icons/fa';
+import { FaGear } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { BiFileBlank } from 'react-icons/bi';
+import { PiNoteBlankFill } from 'react-icons/pi';
+
 import { IoMdLogOut } from 'react-icons/io';
 
 const SideBar = () => {
@@ -19,9 +27,9 @@ const SideBar = () => {
             name: 'Dashboard',
             icon: <MdDashboard />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'Dashboard List', link: '/products' },
+                { id: 2, name: 'Dashboard View', link: '/add-product' },
+                { id: 3, name: 'Dashboard Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
@@ -31,9 +39,9 @@ const SideBar = () => {
             name: 'authentication',
             icon: <FaLock />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'authentication List', link: '/products' },
+                { id: 2, name: 'authentication View', link: '/add-product' },
+                { id: 3, name: 'authentication Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
@@ -43,101 +51,89 @@ const SideBar = () => {
             name: 'users',
             icon: <FaUserCircle />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'users List', link: '/products' },
+                { id: 2, name: 'users View', link: '/add-product' },
+                { id: 3, name: 'users Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 3,
-            name: 'users',
-            icon: <FaUserCircle />,
+            name: 'Products',
+            icon: <AiFillProduct />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'users List', link: '/products' },
+                { id: 2, name: 'users View', link: '/add-product' },
+                { id: 3, name: 'users Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 4,
-            name: 'Products',
-            icon: <AiOutlineProduct />,
+            name: 'invoices',
+            icon: <FaReceipt />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'invoices List', link: '/products' },
+                { id: 2, name: 'invoices View', link: '/add-product' },
+                { id: 3, name: 'invoices Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 5,
-            name: 'invoices',
-            icon: <TiShoppingCart />,
+            name: 'Orders',
+            icon: <FaShoppingCart />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'Orders List', link: '/products' },
+                { id: 2, name: 'Orders View', link: '/add-product' },
+                { id: 3, name: 'Orders Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 6,
-            name: 'Orders',
-            icon: <TiShoppingCart />,
+            name: 'emails',
+            icon: <MdEmail />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'emails List', link: '/products' },
+                { id: 2, name: 'emails View', link: '/add-product' },
+                { id: 3, name: 'emails Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 7,
-            name: 'eamils',
-            icon: <TiShoppingCart />,
+            name: 'notifications',
+            icon: <FaBell />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'notifications List', link: '/products' },
+                { id: 2, name: 'notifications View', link: '/add-product' },
+                { id: 3, name: 'notifications Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 8,
-            name: 'notifications',
-            icon: <TiShoppingCart />,
+            name: 'settings',
+            icon: <FaGear />,
             submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
+                { id: 1, name: 'settings List', link: '/products' },
+                { id: 2, name: 'settings View', link: '/add-product' },
+                { id: 3, name: 'settings Upload', link: '/add-product' },
             ],
             isToggleSubmenu: false,
         },
 
         {
             id: 9,
-            name: 'settings',
-            icon: <TiShoppingCart />,
-            submenu: [
-                { id: 1, name: 'Products List', link: '/products' },
-                { id: 2, name: 'Products View', link: '/add-product' },
-                { id: 3, name: 'Products Upload', link: '/add-product' },
-            ],
-            isToggleSubmenu: false,
-        },
-
-        {
-            id: 10,
             name: 'blank Page',
-            icon: <TiShoppingCart />,
+            icon: <PiNoteBlankFill />,
             submenu: [],
             isToggleSubmenu: false,
         },
@@ -176,9 +172,7 @@ const SideBar = () => {
                                 className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
                                 onClick={() => isOpenSubmenu(element.id)}
                             >
-                                <span className="icon">
-                                    <TiShoppingCart />
-                                </span>
+                                <span className="icon">{element.icon}</span>
                                 {element.id} {element.name}
                                 {element.submenu.length > 0 ? (
                                     <span className="arrow">
@@ -210,21 +204,6 @@ const SideBar = () => {
                             )}
                         </li>
                     ))}
-
-                    {/**
-                     * 단일 메뉴
-                     */}
-                    <li>
-                        <Button className={` w-100 ${activeTap === 1 ? 'active' : ''} `} onClick={() => isOpenSubmenu(1)}>
-                            <span className="icon">
-                                <TiShoppingCart />
-                            </span>
-                            단일메뉴
-                        </Button>
-                    </li>
-                    {/**
-                     * 단일 메뉴 끝
-                     */}
                 </ul>
 
                 <br />
