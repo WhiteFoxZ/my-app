@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import Button from '@mui/material/Button';
-import { MdOutlineMenuOpen, MdDarkMode } from 'react-icons/md';
+import { MdOutlineMenu, MdMenuOpen, MdDarkMode } from 'react-icons/md';
 
 import SearchBox from '../SearchBox';
 import { MdOutlineLightMode } from 'react-icons/md';
@@ -20,6 +20,7 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Box from '@mui/material/Box';
+import { MyContext } from '../../App'; // Adjust the path as needed
 
 import { IoShieldHalfSharp } from 'react-icons/io5';
 
@@ -70,10 +71,9 @@ const Header = () => {
         setLight(light ? Boolean(false) : Boolean(true));
     };
 
-    const [mainMenu, setMainMenu] = React.useState(Boolean(true));
-    const handleMainMenuClick = event => {
-        setMainMenu(mainMenu ? Boolean(false) : Boolean(true));
-    };
+    // TODO: Replace this import with the actual path to your context file
+
+    const context = React.useContext(MyContext);
 
     return (
         <>
@@ -89,9 +89,10 @@ const Header = () => {
                         </div>
 
                         <div className="col-sm-3 d-flex align-items-center part2">
-                            <Button className="rounded-circle me-3" onClick={handleMainMenuClick}>
-                                {mainMenu ? <MdOutlineMenuOpen /> : <MdOutlineMenuOpen style={{ transform: 'rotate(180deg)' }} />}
+                            <Button className="rounded-circle me-3" onClick={() => context.setIsToggleSideBar(!context.isToggleSideBar)}>
+                                {context.isToggleSideBar === true ? <MdOutlineMenu /> : <MdMenuOpen />}
                             </Button>
+
                             <SearchBox />
                         </div>
 

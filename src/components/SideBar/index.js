@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { IoMdLogOut } from 'react-icons/io';
 
 import { SideBarMenuList } from '../SideBarMenuList/SideBarMenuList';
+import { MyContext } from '../../App';
 
 const SideBar = () => {
     const [activeTap, setActiveTap] = React.useState(0);
@@ -33,6 +34,9 @@ const SideBar = () => {
 
         console.log('activeTap', activeTap, 'isToggleSubmenu', menuList[index].isToggleSubmenu);
     };
+
+    //사이드바 메뉴 토클링
+    const context = React.useContext(MyContext);
 
     return (
         <>
