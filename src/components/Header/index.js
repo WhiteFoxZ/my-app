@@ -70,6 +70,11 @@ const Header = () => {
         setLight(light ? Boolean(false) : Boolean(true));
     };
 
+    const [mainMenu, setMainMenu] = React.useState(Boolean(true));
+    const handleMainMenuClick = event => {
+        setMainMenu(mainMenu ? Boolean(false) : Boolean(true));
+    };
+
     return (
         <>
             <header className="d-flex align-items-center">
@@ -84,8 +89,8 @@ const Header = () => {
                         </div>
 
                         <div className="col-sm-3 d-flex align-items-center part2">
-                            <Button className="rounded-circle me-3">
-                                <MdOutlineMenuOpen />
+                            <Button className="rounded-circle me-3" onClick={handleMainMenuClick}>
+                                {mainMenu ? <MdOutlineMenuOpen /> : <MdOutlineMenuOpen style={{ transform: 'rotate(180deg)' }} />}
                             </Button>
                             <SearchBox />
                         </div>

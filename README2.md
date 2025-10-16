@@ -15,3 +15,13 @@ https://kongmemo.tistory.com/7
 
 bootstrap4 - 공백(Spacing) 주는 법 (mt , mb, ml, mr, mx, my, pt, pb, pl, pr, px, py)
 bootstrap5 - 공백(Spacing) 주는 법 (mt , mb, ms, me, mx, my, pt, pb, pl, pr, px, py)
+
+mkdir authentication
+mkdir users
+mkdir products
+mkdir invoices
+mkdir orders
+mkdir email
+mkdir notifications
+mkdir settings
+mkdir blank

@@ -544,3 +544,20 @@ header button.rounded-circle:hover svg {
     border-radius: 10px;
     padding: 25px;
 }
+
+.card {
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+.card .hd {
+    font-size: 20px;
+    font-weight: bold;
+    color: #292929;
+}
+
+.cardFilters .col-md-3 h4 {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #403e57;
+}
