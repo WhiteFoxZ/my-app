@@ -579,3 +579,169 @@ header button.rounded-circle:hover svg {
     text-transform: capitalize;
     color: #403e57;
 }
+
+.btn-blue {
+    background: #0858f7 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important ;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    border-radius: 8px !important;
+}
+
+.btn-lg {
+    padding: 5px 25px !important;
+}
+.btn-big {
+    padding: 10px 25px !important;
+    font-size: 16px !important;
+}
+
+.btn-round {
+    border-radius: 50px !important;
+    padding: 5px 20px !important;
+}
+
+.full {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important; /** flex-grow: 0: 컨테이너에 남는 공간이 있더라도 아이템의 크기를 늘리지 않겠다는 의미입니다. flex-shrink: 0: 컨테이너의 공간이 부족하더라도 아이템의 크기를 줄이지 않겠다는 의미입니다. 이 속성이 없었다면 공간이 부족할 때 모든 아이템이 균등하게 줄어들었을 것입니다. flex-basis: 100%: 아이템의 기본 크기를 **컨테이너 너비의 100%**로 설정합니다. 이 값은 다른 flex 아이템이 없다는 가정 하에 컨테이너의 전체 너비를 차지하게 만듭니다. */
+}
+
+.loginSection {
+    width: 100%;
+    height: 100vh; /*100% 뷰포트 높이*/
+    padding: 35px 25px;
+    background: #fff;
+    position: relative;
+}
+
+.loginPatern {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.loginSection .loginBox {
+    width: 400px;
+    height: auto;
+    padding: 40px 30px;
+    margin: auto;
+}
+
+.loginSection .loginBox .wrapper {
+    width: 100%;
+    height: auto;
+    background: #f0f0f0;
+    position: relative;
+    z-index: 100;
+    padding: 35px;
+}
+
+.loginSection .loginBox .wrapper .form-group {
+    margin-bottom: 18px;
+}
+
+.loginSection .loginBox .wrapper .form-control {
+    background: #fff !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 5px !important;
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    padding-left: 40px;
+}
+
+.loginSection .loginBox .wrapper .form-control:focus {
+    border: 1px solid #0858f7 !important;
+}
+
+.loginSection .loginBox .wrapper .form-group .icon {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    z-index: 100;
+    font-size: 22px;
+}
+
+.loginSection .loginBox .wrapper .form-group .icon svg {
+    color: #5e5d72;
+}
+
+.loginSection .loginBox .wrapper .form-group.focus .icon svg {
+    color: #0858f7 !important;
+}
+
+.toggleShowPassword {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.toggleShowPassword svg {
+    font-size: 22px;
+    color: #5e5d72;
+}
+
+/* Edge, IE 브라우저에서 눈 아이콘 제거 */
+input[type='password']::-ms-reveal {
+    display: none;
+}
+
+/* Chrome 브라우저에서 비밀번호 저장 아이콘(열쇠 모양 등) 제거 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.link {
+    color: #5e5d72;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+.link:hover {
+    color: #0858f7 !important;
+    text-decoration: none !important;
+}
+
+.link.color {
+    color: #0858f7 !important;
+    text-decoration: none !important;
+}
+
+.loginSection .loginBox .wrapper .link {
+    font-size: 14px;
+}
+
+.loginSection .loginBox .wrapper .or span.line {
+    display: block;
+    width: 35%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.loginSection .loginBox .wrapper .or span.txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.loginWithGoogle {
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}

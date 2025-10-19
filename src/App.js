@@ -2,16 +2,21 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Dashboard from './pages/dashboard/Dashboard';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
 import SideBarMenuList from './components/SideBarMenuList/SideBarMenuList';
+import Dashboard from './pages/Dashboard/index';
+import Login from './pages/Login';
 
 const MyContext = React.createContext();
 
 function App() {
     // 사이드바 토글 상태 관리
     const [isToggleSideBar, setIsToggleSideBar] = React.useState(false);
+
+    const [isLogin, setIsLogin] = React.useState(false);
+
+    const [isHideSidebarAndHearder, setIsHideSidebarAndHearder] = React.useState(false);
 
     React.useEffect(() => {
         if (isToggleSideBar) {
@@ -20,26 +25,35 @@ function App() {
             document.body.classList.add('sidebar-collapsed');
         }
 
-        // alert(isToggleSideBar);
+        // alert(isHideSidebarAndHearder);
     }, [isToggleSideBar]);
 
     const values = {
         isToggleSideBar,
         setIsToggleSideBar,
+        isLogin,
+        setIsLogin,
+        isHideSidebarAndHearder,
+        setIsHideSidebarAndHearder,
     };
 
     return (
         <BrowserRouter>
             <MyContext.Provider value={values}>
-                <Header />
+                {!isHideSidebarAndHearder && <Header />}
 
                 <div className="main d-flex">
-                    <div className={`sidebarWrapper ${isToggleSideBar ? 'toggle' : ''}`}>
-                        <SideBar />
-                    </div>
-                    <div className={`content ${isToggleSideBar ? 'toggle' : ''}`}>
+                    {!isHideSidebarAndHearder && (
+                        <div className={`sidebarWrapper ${isToggleSideBar ? 'toggle' : ''}`}>
+                            <SideBar />
+                        </div>
+                    )}
+
+                    <div className={`content  ${isHideSidebarAndHearder && 'full'}  ${isToggleSideBar ? 'toggle' : ''}`}>
                         <Routes>
                             <Route path="/" exact={true} element={<Dashboard />} />
+
+                            <Route path="/login" exact={true} element={<Login />} />
 
                             {SideBarMenuList.map(menu => {
                                 return menu.submenu.map(sub => {
