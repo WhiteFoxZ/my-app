@@ -8,6 +8,7 @@ import { FaBell, FaShoppingCart } from 'react-icons/fa';
 import { FaGear } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { PiNoteBlankFill } from 'react-icons/pi';
+import Dflex from '../../pages/Dflex';
 
 export const SideBarMenuList = [
     {
@@ -124,6 +125,15 @@ export const SideBarMenuList = [
         icon: <PiNoteBlankFill />,
         submenu: [],
         isToggleSubmenu: false,
+    },
+
+    {
+        id: 10,
+        name: 'dflex Page',
+        icon: <FaGear />,
+        submenu: [],
+        isToggleSubmenu: false,
+        link: '/dflex',
     },
 ];
 

@@ -6,7 +6,9 @@ import Header from './components/Header';
 import SideBar from './components/SideBar';
 import SideBarMenuList from './components/SideBarMenuList/SideBarMenuList';
 import Dashboard from './pages/Dashboard/index';
-import Login from './pages/Login';
+import Login from './pages/Login/index';
+import SignUp from './pages/SignUp/index';
+import Dflex from './pages/Dflex/index';
 
 const MyContext = React.createContext();
 
@@ -54,6 +56,9 @@ function App() {
                             <Route path="/" exact={true} element={<Dashboard />} />
 
                             <Route path="/login" exact={true} element={<Login />} />
+
+                            <Route path="/signUp" exact={true} element={<SignUp />} />
+                            <Route path="/dflex" exact={true} element={<Dflex />} />
 
                             {SideBarMenuList.map(menu => {
                                 return menu.submenu.map(sub => {

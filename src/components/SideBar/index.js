@@ -46,20 +46,33 @@ const SideBar = () => {
                 <ul>
                     {menuList.map(element => (
                         <li key={element.id}>
-                            <Button
-                                className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
-                                onClick={() => isOpenSubmenu(element.id)}
-                            >
-                                <span className="icon">{element.icon}</span>
-                                {element.id} {element.name}
-                                {element.submenu.length > 0 ? (
-                                    <span className="arrow">
-                                        <FaAngleRight />
-                                    </span>
-                                ) : (
-                                    <span></span>
-                                )}
-                            </Button>
+                            {element.submenu.length > 0 ? (
+                                <Button
+                                    className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
+                                    onClick={() => isOpenSubmenu(element.id)}
+                                >
+                                    <span className="icon">{element.icon}</span>
+                                    {element.id} {element.name}
+                                    {element.submenu.length > 0 ? (
+                                        <span className="arrow">
+                                            <FaAngleRight />
+                                        </span>
+                                    ) : (
+                                        <span></span>
+                                    )}
+                                </Button>
+                            ) : (
+                                <Button
+                                    className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
+                                    onClick={() => isOpenSubmenu(element.id)}
+                                >
+                                    <span className="icon">{element.icon}</span>
+
+                                    <Link to={element.link}>
+                                        {element.id} {element.name}
+                                    </Link>
+                                </Button>
+                            )}
 
                             {element.submenu.length > 0 ? (
                                 <div
