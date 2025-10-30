@@ -35,13 +35,16 @@ const SignUp = () => {
 
             <section className="loginSection signUpSection">
                 <div className="row">
-                    <div className="col-md-8 d-flex align-items-center flex-column">
-                        <h1>Best ux/ui fashion ecommerce dashboard & admin panel</h1>
-                        <p>
+                    <div className="col-md-8 d-flex align-items-center flex-column justify-content-center mc-register-banner-content ">
+                        <p className="mc-register-banner-title">Best ux/ui fashion ecommerce dashboard & admin panel</p>
+                        <p className="mc-register-banner-descrip">
                             Elit Iusto dolore libero recusandae dolor dolores explicabo ullam cum facilis aperiam alias odio quam excepturi molestiae
                             omnis inventore. Repudiandae officia placeat amet consectetur dicta dolorem quo
                         </p>
-                        <Button className="btn-blue btn-lg w-100 btn-big ">go to home</Button>
+
+                        <Link to={'/'} className="btn-blue btn-big">
+                            go to home
+                        </Link>
                     </div>
                     <div className="col-md-4">
                         <div className="loginBox">
@@ -135,7 +138,12 @@ const SignUp = () => {
                                             <span className="line"></span>
                                         </div>
 
-                                        <Button variant="outlined" className="w-100 btn-lg btn-big loginWithGoogle">
+                                        <Button
+                                            variant="outlined"
+                                            className="w-100 btn-lg btn-big loginWithGoogle"
+                                            LinkComponent="a"
+                                            href="https://accounts.google.com/"
+                                        >
                                             <img src={googlelogo} width="25px" />
                                             &nbsp; Sign In with Google
                                         </Button>

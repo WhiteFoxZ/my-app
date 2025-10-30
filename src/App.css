@@ -302,15 +302,11 @@ header button.rounded-circle:hover svg {
     font-size: 18px !important;
 }
 
-.main .sidebarWrapper .sidebar ul li button a {
-    color: #5e5d72 !important;
-    text-decoration: none !important;
-}
-
-.main .sidebarWrapper .sidebar ul li button a:visited,
-a:active,
+a,
+a:visited,
 a:hover {
     text-decoration: none !important;
+    color: #5e5d72;
 }
 
 .main .sidebarWrapper .sidebar ul li button:hover {
@@ -387,6 +383,10 @@ a:hover {
     font-size: 14px !important;
     font-weight: 500 !important;
     transition: all 0.3s;
+}
+
+.main .sidebarWrapper .sidebar ul .submenu li a.active {
+    color: #0858f7 !important;
 }
 
 .main .sidebarWrapper .sidebar ul .submenu li a:hover {
@@ -775,4 +775,21 @@ input:-webkit-autofill:active {
     border: 0px;
     background: transparent !important;
     padding-top: 10px !important;
+}
+
+.mc-register-banner-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.mc-register-banner-title {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.mc-register-banner-descrip {
+    font-size: 17px;
+    margin-bottom: 40px;
 }

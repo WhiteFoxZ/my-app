@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { IoMdLogOut } from 'react-icons/io';
 
@@ -10,29 +10,36 @@ import { SideBarMenuList } from '../SideBarMenuList/SideBarMenuList';
 import { MyContext } from '../../App';
 
 const SideBar = () => {
-    const [activeTap, setActiveTap] = React.useState(0);
+    const [activeTapId, setActiveIdTap] = React.useState(0);
 
     const menuArray = SideBarMenuList;
 
     const [menuList, setMenuList] = React.useState(menuArray);
 
     const isOpenSubmenu = index => {
-        setActiveTap(index);
+        if (activeTapId === index && menuList[index].isToggleSubmenu === true) {
+            //같은 메뉴 클릭시
+            menuList[index].isToggleSubmenu = false;
+            setMenuList([...menuList]); // 배열 상태 업데이트
+            return;
+        } else {
+            setActiveIdTap(index);
 
-        if (menuList[index].submenu && menuList[index].submenu !== undefined && menuList[index].submenu.length !== 0) {
-            // 단일 메뉴 클릭시
-            menuList.map(item => {
-                item.isToggleSubmenu = false;
-                return item;
-            });
+            if (menuList[index].submenu && menuList[index].submenu !== undefined && menuList[index].submenu.length !== 0) {
+                // 단일 메뉴 클릭시
+                menuList.map(item => {
+                    item.isToggleSubmenu = false;
+                    return item;
+                });
+            }
+            //Cannot read properties of undefined (reading 'submenu')
+
+            menuList[index].isToggleSubmenu = true;
+
+            setMenuList([...menuList]); // 배열 상태 업데이트
         }
-        //Cannot read properties of undefined (reading 'submenu')
 
-        menuList[index].isToggleSubmenu = true;
-
-        setMenuList([...menuList]); // 배열 상태 업데이트
-
-        console.log('activeTap', activeTap, 'isToggleSubmenu', menuList[index].isToggleSubmenu);
+        console.log('activeTapId', activeTapId, 'isToggleSubmenu', menuList[index].isToggleSubmenu);
     };
 
     //사이드바 메뉴 토클링
@@ -48,7 +55,7 @@ const SideBar = () => {
                         <li key={element.id}>
                             {element.submenu.length > 0 ? (
                                 <Button
-                                    className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
+                                    className={` w-100 ${activeTapId === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
                                     onClick={() => isOpenSubmenu(element.id)}
                                 >
                                     <span className="icon">{element.icon}</span>
@@ -63,29 +70,29 @@ const SideBar = () => {
                                 </Button>
                             ) : (
                                 <Button
-                                    className={` w-100 ${activeTap === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
+                                    className={` w-100 ${activeTapId === element.id && element.isToggleSubmenu === true ? 'active' : ''} `}
                                     onClick={() => isOpenSubmenu(element.id)}
                                 >
                                     <span className="icon">{element.icon}</span>
 
-                                    <Link to={element.link}>
+                                    <NavLink to={element.link}>
                                         {element.id} {element.name}
-                                    </Link>
+                                    </NavLink>
                                 </Button>
                             )}
 
                             {element.submenu.length > 0 ? (
                                 <div
                                     className={` submenuWrapper ${
-                                        activeTap === element.id && element.isToggleSubmenu === true ? 'colapse' : 'colapsed'
+                                        activeTapId === element.id && element.isToggleSubmenu === true ? 'colapse' : 'colapsed'
                                     } `}
                                 >
                                     <ul className="submenu">
                                         {element.submenu.map(sub => (
                                             <li key={sub.id}>
-                                                <Link to={sub.link} className="text-decoration-none">
+                                                <NavLink to={sub.link} className="text-decoration-none">
                                                     {sub.name}
-                                                </Link>
+                                                </NavLink>
                                             </li>
                                         ))}
                                     </ul>
