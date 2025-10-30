@@ -10,7 +10,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import React from 'react';
+import { MyContext } from '../../App';
 
 const Dashboard = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -46,6 +48,12 @@ const Dashboard = () => {
         else if (event.target.name === 'select-searchBy') setsearchBy(event.target.value);
         else if (event.target.name === 'select-showBy') setshowBy(event.target.value);
     };
+
+    const context = React.useContext(MyContext);
+
+    useEffect(() => {
+        context.setIsHideSidebarAndHearder(false);
+    }, []);
 
     return (
         <>
