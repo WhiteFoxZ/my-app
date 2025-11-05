@@ -8,7 +8,9 @@ import { FaBell, FaShoppingCart } from 'react-icons/fa';
 import { FaGear } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { PiNoteBlankFill } from 'react-icons/pi';
-import Dflex from '../../pages/Dflex';
+
+import Dashboard from '../../pages/Dashboard';
+import TimerContainer from '../../pages/TimerView/TimerContainer';
 
 export const SideBarMenuList = [
     {
@@ -16,9 +18,9 @@ export const SideBarMenuList = [
         name: 'Dashboard',
         icon: <MdDashboard />,
         submenu: [
-            { id: 1, name: 'Dashboard List', link: '/dashboard' },
-            { id: 2, name: 'Dashboard View', link: '/viewDashboard' },
-            { id: 3, name: 'Dashboard Upload', link: '/addDashboard' },
+            { id: 1, name: 'Dashboard List', link: '/dashboard', element: <Dashboard /> },
+            { id: 2, name: 'Dashboard View', link: '/viewDashboard', element: <Dashboard /> },
+            { id: 3, name: 'Dashboard Upload', link: '/addDashboard', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -28,9 +30,9 @@ export const SideBarMenuList = [
         name: 'authentication',
         icon: <FaLock />,
         submenu: [
-            { id: 1, name: 'authentication List', link: '/authentication' },
-            { id: 2, name: 'authentication View', link: '/add-product' },
-            { id: 3, name: 'authentication Upload', link: '/add-product' },
+            { id: 1, name: 'authentication List', link: '/authentication', element: <Dashboard /> },
+            { id: 2, name: 'authentication View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'authentication Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -40,9 +42,9 @@ export const SideBarMenuList = [
         name: 'users',
         icon: <FaUserCircle />,
         submenu: [
-            { id: 1, name: 'users List', link: '/products' },
-            { id: 2, name: 'users View', link: '/add-product' },
-            { id: 3, name: 'users Upload', link: '/add-product' },
+            { id: 1, name: 'users List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'users View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'users Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -52,9 +54,9 @@ export const SideBarMenuList = [
         name: 'Products',
         icon: <AiFillProduct />,
         submenu: [
-            { id: 1, name: 'Products List', link: '/products' },
-            { id: 2, name: 'Products View', link: '/add-product' },
-            { id: 3, name: 'Products Upload', link: '/add-product' },
+            { id: 1, name: 'Products List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'Products View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'Products Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -64,9 +66,9 @@ export const SideBarMenuList = [
         name: 'invoices',
         icon: <FaReceipt />,
         submenu: [
-            { id: 1, name: 'invoices List', link: '/products' },
-            { id: 2, name: 'invoices View', link: '/add-product' },
-            { id: 3, name: 'invoices Upload', link: '/add-product' },
+            { id: 1, name: 'invoices List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'invoices View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'invoices Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -76,9 +78,9 @@ export const SideBarMenuList = [
         name: 'Orders',
         icon: <FaShoppingCart />,
         submenu: [
-            { id: 1, name: 'Orders List', link: '/products' },
-            { id: 2, name: 'Orders View', link: '/add-product' },
-            { id: 3, name: 'Orders Upload', link: '/add-product' },
+            { id: 1, name: 'Orders List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'Orders View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'Orders Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -88,9 +90,9 @@ export const SideBarMenuList = [
         name: 'emails',
         icon: <MdEmail />,
         submenu: [
-            { id: 1, name: 'emails List', link: '/products' },
-            { id: 2, name: 'emails View', link: '/add-product' },
-            { id: 3, name: 'emails Upload', link: '/add-product' },
+            { id: 1, name: 'emails List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'emails View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'emails Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -100,9 +102,9 @@ export const SideBarMenuList = [
         name: 'notifications',
         icon: <FaBell />,
         submenu: [
-            { id: 1, name: 'notifications List', link: '/products' },
-            { id: 2, name: 'notifications View', link: '/add-product' },
-            { id: 3, name: 'notifications Upload', link: '/add-product' },
+            { id: 1, name: 'notifications List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'notifications View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'notifications Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -112,9 +114,9 @@ export const SideBarMenuList = [
         name: 'settings',
         icon: <FaGear />,
         submenu: [
-            { id: 1, name: 'settings List', link: '/products' },
-            { id: 2, name: 'settings View', link: '/add-product' },
-            { id: 3, name: 'settings Upload', link: '/add-product' },
+            { id: 1, name: 'settings List', link: '/products', element: <Dashboard /> },
+            { id: 2, name: 'settings View', link: '/add-product', element: <Dashboard /> },
+            { id: 3, name: 'settings Upload', link: '/add-product', element: <Dashboard /> },
         ],
         isToggleSubmenu: false,
     },
@@ -125,6 +127,7 @@ export const SideBarMenuList = [
         icon: <PiNoteBlankFill />,
         submenu: [],
         isToggleSubmenu: false,
+        element: <Dashboard />,
     },
 
     {
@@ -134,6 +137,17 @@ export const SideBarMenuList = [
         submenu: [],
         isToggleSubmenu: false,
         link: '/dflex',
+        element: <Dashboard />,
+    },
+
+    {
+        id: 11,
+        name: 'TimerView Page',
+        icon: <FaGear />,
+        submenu: [],
+        isToggleSubmenu: false,
+        link: '/timerView',
+        element: <TimerContainer />,
     },
 ];
 

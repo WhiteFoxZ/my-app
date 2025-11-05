@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard/index';
 import Login from './pages/Login/index';
 import SignUp from './pages/SignUp/index';
 import Dflex from './pages/Dflex/index';
+import TimerContainer from './pages/TimerView/TimerContainer';
 
 const MyContext = React.createContext();
 
@@ -58,11 +59,14 @@ function App() {
                             <Route path="/login" exact={true} element={<Login />} />
 
                             <Route path="/signUp" exact={true} element={<SignUp />} />
+
                             <Route path="/dflex" exact={true} element={<Dflex />} />
+
+                            <Route path="/timerView" exact={true} element={<TimerContainer />} />
 
                             {SideBarMenuList.map(menu => {
                                 return menu.submenu.map(sub => {
-                                    return <Route path={sub.link} exact={true} element={<Dashboard />} />;
+                                    return <Route path={sub.link} exact={true} element={sub.element} />;
                                 });
                             })}
                         </Routes>

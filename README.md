@@ -58,4 +58,10 @@ npm install react-icons --save
 
 구글 검색 bootstrap 4 npm
 
+############################ mobx 환경설정 ###################
+
+https://mobx.js.org/
+
 npm install bootstrap 설치
+
+npm install mobx mobx-react-lite --save
