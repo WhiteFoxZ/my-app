@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { AuthContext } from './components/Login/AuthContext';
+import { authStore } from './components/Login/AuthStore';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App />
+        <AuthContext.Provider value={authStore}>
+            <App />
+        </AuthContext.Provider>
     </React.StrictMode>
 );
 
